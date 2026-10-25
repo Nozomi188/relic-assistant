@@ -26,7 +26,8 @@
       "native/**"
     ],
     "win": {
-      "target": "portable"
+      "target": "portable",
+	  "icon": "build/icon.ico"
     },
     "artifactName": "RelicAssistant-${version}.${ext}",
     "compression": "normal"

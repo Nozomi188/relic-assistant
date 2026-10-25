@@ -5,5 +5,5 @@ if errorlevel 1 (
  pause
  exit /b 1
 )
-call npm run dist:win
+call npm run dist:win -- --config.compression=store
 pause

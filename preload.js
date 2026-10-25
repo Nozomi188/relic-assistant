@@ -1,0 +1,2 @@
+const {contextBridge,ipcRenderer}=require('electron');
+contextBridge.exposeInMainWorld('relic',Object.freeze({onState:callback=>{ipcRenderer.on('state-changed',(_event,state)=>callback(state));},load:()=>ipcRenderer.invoke('load'),save:d=>ipcRenderer.invoke('save',d),copy:t=>ipcRenderer.invoke('copy',t),window:a=>ipcRenderer.invoke('window',a),export:()=>ipcRenderer.invoke('export'),import:()=>ipcRenderer.invoke('import')}));

@@ -1,0 +1,34 @@
+{
+  "name": "relic-assistant",
+  "version": "1.5.0",
+  "description": "遗物助手 Electron 桌面版",
+  "main": "main.js",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test",
+    "dist:win": "electron-builder --win portable --x64"
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "local.relic.assistant",
+    "productName": "遗物助手",
+    "files": [
+      "main.js",
+      "preload.js",
+      "store.js",
+      "ui/**",
+      "click-through.js",
+      "native/**"
+    ],
+    "win": {
+      "target": "portable"
+    },
+    "artifactName": "RelicAssistant-${version}.${ext}",
+    "compression": "normal"
+  }
+}
